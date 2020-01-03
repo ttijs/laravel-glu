@@ -99,10 +99,9 @@ php artisan make:migration CreatePersonTable
 
 Hier geldt net als Controllers en Models de regel dat je de Migration noemt naar hetgeen wat het doet. In dt voorbeeld maken we een Persons tabel aan door de Migration zo te noemen. Het bestand moet altijd eindigen met `Table` en de woorden moeten gescheiden worden met beginnend hoofdletter (PascalCase).
 
-In de les zal ik uitleggen hoe je de migration moet bewerken om de staat van een tabel aan te passen en het daadwerkelijk migreren van een database tabel.  
-Dit gebeurt middels de terminal commando: 
+In de les zal ik uitleggen hoe je de migration moet bewerken om de staat van een tabel aan te passen en het daadwerkelijk migreren van een database tabel.  Dit gebeurt middels de terminal commando: 
 ```
-php artisan migrate:<commando>
+php artisan migrate:
 ```
 
 ## Wat is een Seeder?
