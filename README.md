@@ -19,7 +19,7 @@ Zoals je hierboven ziet helpt Laravel om bepaalde dingen niet te hoeven doen, in
 
 	- Komt met kant en klare server
 	- Up-2-date met de laatste security issues
-	- Is geprepareerd met een gebruikers authenticatie tabellen
+	- Is geprepareerd met een gebruikers authenticatie tabel
 	- Laravel komt met vele handige tools om snel code te generen
 	- Laravel is een LTS framework (long term support)
 	- Een populair framework, lage leercurve en voorzien van MVC
@@ -31,19 +31,20 @@ Zoals je hierboven ziet helpt Laravel om bepaalde dingen niet te hoeven doen, in
 
     - Niet steeds het wiel opnieuw hoeven uit vinden, sneller applicaties maken
     - Code structureren waardoor de kwaliteit van code optimaal is
-    - ransparant maken van wat het proces is van bijvoorbeeld een pagina bezoek (request)
+    - Transparant maken van wat het proces is van bijvoorbeeld een pagina bezoek (request)
     - Front-end code scheiden van back-end code
     - Beheren van versies van database tabellen
     - Database dynamisch opvullen met Seeders
     - Gebruik maken van de laatste technieken
+    - En natuurlijk nog veel meer
 
 ## Wat voor kansen geeft het me?
 
 Als je Laravel beheerst, dan toon je aan dat je ook gedegen kennis hebt van MVC, PHP, databases front-end, Command Line Interface (CLI) etc. Je bent hierdoor breed inzetbaar als je als Laravel programmeur aan de slag wilt. 
 
-Laravel wordt door veel bedrijven toegepast om hun wensen te implementeren. Dit betekent dat als jij gedegen kennis hebt van Laravel, dat jij hierin een rol kan spelen. Mocht je jezelf willen onderscheiden van alle andere ontwikkelaars en je wilt verder gaan met Laravel, probeer Laravel gecertificeerd te raken voor als je in loondienst treedt. 
-
 Als je zelf ooit een goed idee hebt en je wilt het uitwerken in code, dan kun je met Laravel snel iets bereiken. Zo ken ik iemand die graag babykleding online wou verkopen, een beetje verstand had van programmeren in PHP maar graag snel wilde verkopen. Binnen een week had hij zijn eerste rompertje verkocht met behulp van Laravel.
+
+Laravel wordt door veel bedrijven toegepast om hun wensen te implementeren. Dit betekent dat als jij gedegen kennis hebt van Laravel, dat jij hierin een rol kan spelen. Hoe meer kennis je hebt, des te aantrekkelijker het voor een bedrijf is om je in te huren. Mocht je jezelf willen onderscheiden van alle andere ontwikkelaars en je wilt verder gaan met Laravel, probeer Laravel gecertificeerd te raken alvorens je in loondienst treedt. 
 
 # Achtergrondinformatie MVC
 
@@ -51,19 +52,21 @@ MVC is een design pattern en staat voor Model-View-Controller. Laat je niet afsc
 
 ## Model
 
-Dit kan op 2 manieren geïnterpreteerd worden. Vroeger implementeerde de programmeur alle wensen van het bedrijf in Models. Deze wensen worden ook wel Business Logic genoemd. Terwijl de hedendaagse programmeur een Model ziet als een Class dat rechtstreeks met een database tabel spreekt en de resultaten onthoudt. Dit laatste heeft Laravel ook zo gehanteerd.
+Dit kan op 2 manieren geïnterpreteerd worden. Vroeger implementeerde de programmeur alle wensen van het bedrijf in Model Classes. Deze wensen worden ook wel Business Logic genoemd. Terwijl de hedendaagse programmeur een Model ziet als een Class dat rechtstreeks met een database tabel spreekt en de resultaten onthoudt. Dit laatste heeft Laravel ook zo gehanteerd.
 
 Als je in de mappenstructuur van Laravel kijkt, dan worden alle Models geplaatst in de /app/ folder. Er geldt een afspraak binnen Laravel voor het benoemen van je Models: dit moet altijd in de enkelvoud benoemd worden. Bijvoorbeeld: Item, Visit, Person. 
 
 ## View
 
-De View is een bestand waarin output voor de browser geprepareerd wordt. De view kan op meerdere plekken in Laravel opgeroepen worden. In MVC gebeurt dat doorgaans vanuit de Controller. Je kunt in Laravel ook views
+De View is een bestand waarin output voor de browser geprepareerd wordt. De view kan op meerdere plekken in Laravel opgeroepen worden. In MVC gebeurt dat doorgaans vanuit de Controller. Je kunt in Laravel ook views vanuit de Route aanroepen.
 
 ## Controller
 
 De Controller is een bestand dat door de /routes/web.php aangesproken kan worden. In MVC is de Controller die een Model aan spreekt om data op te halen uit een database tabel en die data in een View stopt. De View wordt uiteindelijk vanuit de Controller terug gegeven aan de browser.
 
-Er geldt een afspraak binnen Laravel voor het benoemen van je Controllers: dit moet altijd in de meervoud benoemd worden. Bijvoorbeeld: ItemsController, VisitsController, PersonsController. De kracht van Artisan
+Er geldt een afspraak binnen Laravel voor het benoemen van je Controllers: dit moet altijd in de meervoud benoemd worden. Bijvoorbeeld: ItemsController, VisitsController, PersonsController. 
+
+## De kracht van Artisan
 
 Laravel wordt geleverd met Artisan. Artisan is een programma die je vanuit een opdrachtvenster met PHP kunt aanroepen. De opdrachtvenster, ook wel terminal of Command Line Interface (CLI) genoemd, kun je commando’s in typen om bijvoorbeeld een programma op te starten. Artisan is een PHP programma die volledig aan sluit op Laravel en neemt het werk weg waarmee je normaal gesproken meer tijd kwijt bent om bepaalde PHP bestanden volledig uit schrijven. 
 
