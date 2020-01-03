@@ -141,7 +141,12 @@ Route::get('/blog', 'BlogsController@list');
 In bovenstaand voorbeeld wordt de functie list() aangeroepen van /app/Http/Controllers/BlogController.php
 
 ## Routes Lijst
-Het kan zijn dat er na verloop van tijd een gigantisch lijst van routes zijn gemaakt en je wilt een duidelijk overzicht hebben van alle routes, dan kun je in terminal de volgende commando uit voeren: php artisan route:listData ophalen in Models
+Het kan zijn dat er na verloop van tijd een gigantisch lijst van routes zijn gemaakt en je wilt een duidelijk overzicht hebben van alle routes, dan kun je in terminal de volgende commando uit voeren: 
+```
+php artisan route:list
+```
+
+## Data ophalen in Models
 In het volgende voorbeeld ga ik ervan uit dat er een Model bestaat en een database tabel met informatie die op de Model slaat en pas het toe in MVC.
 
 Ik heb de volgende files aangemaakt:
