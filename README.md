@@ -101,19 +101,19 @@ Hier geldt net als Controllers en Models de regel dat je de Migration noemt naar
 
 In de les zal ik uitleggen hoe je de migration moet bewerken om de staat van een tabel aan te passen en het daadwerkelijk migreren van een database tabel.  Dit gebeurt middels de terminal commando: 
 ```
-php artisan migrate:
+php artisan migrate
 ```
 
 ## Wat is een Seeder?
 Een Seeder is een bestand dat een tabel vult. Seeders zijn te vinden in de folder /database/seeds
 
 ## Hoe maak ik een Seeder?
-In terminal voor je de volgende opdracht uit: 
+In terminal voer je de volgende opdracht uit: 
 ```
 php artisan make:seeder PersonSeeder
 ```
 
-Je ziet vervolgens in de folder /database/seeds/PersonSeeder.php verschijnen.
+Je ziet vervolgens /database/seeds/PersonSeeder.php verschijnen.
 
 In de les zal ik uitleggen hoe je de Seeder moet vullen met geprepareerde data.
 
@@ -130,8 +130,7 @@ Route::get('/blog', function () {
 });
 ```
 
-In bovenstaand voorbeeld wordt er gekeken naar een GET request en als de URL ‘/blog’ is dan geef de output van de view ‘blog’ terug. De view is te vinden in de folder 
-/resources/views/blog.blade.php
+In bovenstaand voorbeeld wordt er gekeken naar een GET request en als de URL ‘/blog’ is dan geef de output van de view ‘blog’ terug. De view is te vinden in de folder /resources/views/blog.blade.php
 
 ## Controllers aanroepen in Routes
 Als je MVC wilt toepassen, dan kun je de route instellen om een bestaande Controller aan te roepen.
