@@ -117,10 +117,10 @@ Je ziet vervolgens /database/seeds/PersonSeeder.php verschijnen.
 
 In de les zal ik uitleggen hoe je de Seeder moet vullen met geprepareerde data.
 
-_Kanttekening: Waarom zou je gebruik willen maken van Seeders? Als je in een team van ontwikkelaars werkt, dan is het verstandig dat iedereen dezelfde informatie in de database heeft staan. Zo kan een team bijvoorbeeld testen of verder werken aan de staat van de database etc.
+_Kanttekening: Waarom zou je gebruik willen maken van Seeders? Als je in een team van ontwikkelaars werkt, dan is het verstandig dat iedereen dezelfde informatie in de database heeft staan. Zo kan een team bijvoorbeeld testen of verder werken aan de staat van de database etc._
 
 ## Wat zijn Routes?
-Routes is een soort landkaart. Als je in je browser naar de URL van je Laravel applicatie gaat, dan gaat de Laraval applicatie de URL op zoeken in de Routes landkaart. Als de URL gevonden is en de juiste request gelijk is met wat er ingesteld staat in je Routes, dan volgt de applicatie de instructies op die gedefinieerd staat voor die URL met request._
+Routes is een soort landkaart. Als je in je browser naar de URL van je Laravel applicatie gaat, dan gaat de Laraval applicatie de URL op zoeken in de Routes landkaart. Als de URL gevonden is en de juiste request gelijk is met wat er ingesteld staat in je Routes, dan volgt de applicatie de instructies op die gedefinieerd staat voor die URL met request.
 
 Routes zijn gedefinieerd in de folder /routes/web.php. Hierin worden alle front-end requests afgevangen.
 
