@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="707391b5-648f-4998-baef-930c1ce02723" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -119,6 +120,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -155,6 +157,7 @@
       <updated>1577966428746</updated>
       <workItem from="1577966430172" duration="18790000" />
       <workItem from="1578037864224" duration="6100000" />
+      <workItem from="1578165773729" duration="656000" />
     </task>
     <servers />
   </component>
@@ -166,9 +169,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="541" y="392" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1578001594149" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1578002017940">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="936" y="525" key="com.intellij.ide.util.TipDialog" timestamp="1578165776582">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="936" y="525" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1578165776582" />
+    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup" timestamp="1578166241643">
+      <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1578002017940" />
+    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1578166241643" />
   </component>
 </project>

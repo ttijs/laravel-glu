@@ -188,3 +188,66 @@ $item = PortfolioItem::where(‘id’, 10)->get();
 ```
 
 
+# Git repository installatie
+
+Ik heb een voorbeeld git repository klaar gezet zodat je kunt zien hoe ik de portfolio heb gemaakt.
+
+De repository bevat een voorbeeld van routes, migrations, seeder, controller, model en views.
+
+## Installatie
+
+Voer de volgende regel uit in je Terminal
+
+```
+git clone https://github.com/geoffsmiths/laravel-glu.git portfolio
+```
+
+Bovenstaande opdracht maakt een exacte kopie van de laravel portfolio repository naar de folder portfolio.
+
+Ga vervolgens naar die directory en voer de volgende commando's achter elkaar uit:
+
+```
+composer install
+npm install
+cp .env.example .env
+```
+
+Pas dan de .env bestand aan met de volgende gegevens:
+
+```
+APP_NAME="Portfolio"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=
+
+LOG_CHANNEL=stack
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=portfolio
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
+
+Zorg ervoor dat de database `portfolio` bestaat en controleer of de DB_USERNAME en DB_PASSWORD correct zijn ingesteld.
+
+Genereer een key:
+```
+php artisan key:generate
+```
+
+Voer de Migrations uit:
+```
+php artisan migrate:refresh
+```
+
+En vul dan de database tabellen:
+```
+php artisan db:seed
+```
+
+De laatste stap is om ervoor te zorgen dat het project via de browser benaderbaar is. 
+
+Klaar!
