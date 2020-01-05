@@ -12,21 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/mijn-werk', 'PortfolioItemsController@list');
+Route::get('/mijn-werk', 'PortfolioItemsController@index');
 
-Route::get('/mijn-werk/{slug}', 'PortfolioItemsController@item');
+Route::get('/mijn-werk/{slug}', 'PortfolioItemsController@show');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', 'ContactController@index');
 
 // Dit is een post en onderstaand is nodig om de velden van het formulier op te vangen
-Route::post('/contact', 'ContactController@post');
+Route::post('/contact', 'ContactController@store');
 
 Route::get('/blog', 'BlogsController@index');
 
+Route::get('/blog/create', 'BlogsController@create');
+
 // Dit is een post en onderstaand is nodig om de velden van het formulier op te vangen
-Route::post('/blog', 'BlogsController@post');
+Route::post('/blog', 'BlogsController@store');
+
+Route::get('/blog/{blogId}', 'BlogsController@show');

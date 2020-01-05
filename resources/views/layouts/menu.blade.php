@@ -1,9 +1,9 @@
 <ul class="nav nav-tabs">
     <li class="nav-item">
         @if(\Request::is('/'))
-            <a class="nav-link active" href="/">Wie ben ik?</a>
+            <a class="nav-link active" href="/">Home</a>
         @else
-            <a class="nav-link" href="/">Wie ben ik?</a>
+            <a class="nav-link" href="/">Home</a>
         @endif
     </li>
     <li class="nav-item">
@@ -14,7 +14,7 @@
         @endif
     </li>
     <li class="nav-item">
-        @if (\Request::is('blog'))
+        @if (\Request::is('blog') || \Request::is('blog/*'))
             <a class="nav-link active" href="/blog">Blog</a>
         @else
             <a class="nav-link" href="/blog">Blog</a>

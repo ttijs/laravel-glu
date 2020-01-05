@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function post()
+    public function index()
+    {
+        return view('contact.index');
+    }
+
+    public function store()
     {
         // Voor meer informatie zie: https://laravel.com/docs/5.7/validation
         request()->validate([

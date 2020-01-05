@@ -21,7 +21,7 @@
         </div>
 
         @error('email')
-            @component('components.alert') {{ $message }} @endcomponent
+        @component('components.alert') {{ $message }} @endcomponent
         @enderror
 
         <div class="form-group">
@@ -30,7 +30,7 @@
         </div>
 
         @error('content')
-            @component('components.alert') {{ $message }} @endcomponent
+        @component('components.alert') {{ $message }} @endcomponent
         @enderror
 
         <button type="submit" class="btn btn-primary">Verzend</button>

@@ -11,10 +11,15 @@ class BlogsController extends Controller
     {
         $blogs = Blog::all();
 
-        return view('blog', ['blogs' => $blogs]);
+        return view('blog.index', ['blogs' => $blogs]);
     }
 
-    public function post()
+    public function create()
+    {
+        return view('blog.create');
+    }
+
+    public function store()
     {
         $data = request()->validate([
             'title' => 'required|min:5|max:200',
@@ -24,6 +29,13 @@ class BlogsController extends Controller
 
         Blog::create($data);
 
-        return redirect()->back();
+        return redirect('/blog');
+    }
+
+    public function show($blogId)
+    {
+        $blog = Blog::find($blogId);
+
+        return view('blog.show', ['blog' => $blog]);
     }
 }

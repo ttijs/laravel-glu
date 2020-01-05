@@ -7,17 +7,17 @@ use Illuminate\Http\Request;
 
 class PortfolioItemsController extends Controller
 {
-    public function list()
+    public function index()
     {
         $items = PortfolioItem::all();
 
-        return view('my_work', ['items' => $items]);
+        return view('my_work.index', ['items' => $items]);
     }
 
-    public function item($slug)
+    public function show($slug)
     {
         $item = PortfolioItem::where('slug', $slug)->get();
 
-        return view('portfolio-item', ['item' => $item[0]]);
+        return view('my_work.show', ['item' => $item[0]]);
     }
 }
