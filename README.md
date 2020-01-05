@@ -248,6 +248,8 @@ En vul dan de database tabellen:
 php artisan db:seed
 ```
 
-De laatste stap is om ervoor te zorgen dat het project via de browser benaderbaar is. 
+Persoonlijk gebruik ik Homestead en dit draai ik op een vagrant box met VirtualBox. 
+
+De laatste stap is om er zelf voor te zorgen dat het project via de browser met een URL benaderbaar is.
 
 Klaar!
