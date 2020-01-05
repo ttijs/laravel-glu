@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="707391b5-648f-4998-baef-930c1ce02723" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +161,7 @@
       <workItem from="1577966430172" duration="18790000" />
       <workItem from="1578037864224" duration="6100000" />
       <workItem from="1578165773729" duration="1178000" />
-      <workItem from="1578210694280" duration="1924000" />
+      <workItem from="1578210694280" duration="3626000" />
     </task>
     <servers />
   </component>
@@ -165,6 +169,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1010" y="76" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578220924588">
+      <screen x="0" y="23" width="2560" height="1337" />
+    </state>
+    <state x="1010" y="76" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1578220924588" />
     <state x="541" y="392" key="NewPhpFileDialog" timestamp="1578001594149">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -173,10 +181,10 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="936" y="525" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1578165776582" />
-    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup" timestamp="1578210793124">
+    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup" timestamp="1578217738587">
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1578002017940" />
-    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1578210793124" />
+    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1578217738587" />
   </component>
 </project>

@@ -11,7 +11,7 @@ class ContactController extends Controller
     {
         // Voor meer informatie zie: https://laravel.com/docs/5.7/validation
         request()->validate([
-            'email' => 'required|min:3|max:150',
+            'email' => 'required|min:3|max:150|email',
             'content' => 'required|min:5|max:500',
         ]);
 
