@@ -23,6 +23,9 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+// Dit is nodig om de velden van het formulier op te vangen
+Route::post('/contact', 'ContactController@post');
+
 Route::get('/blog', function () {
     return view('blog');
 });
