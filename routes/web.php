@@ -32,3 +32,5 @@ Route::get('/blog/create', 'BlogsController@create');
 Route::post('/blog', 'BlogsController@store');
 
 Route::get('/blog/{blog}', 'BlogsController@show');
+Route::get('/blog/{blog}/edit', 'BlogsController@edit');
+Route::put('/blog/{blog}', 'BlogsController@update');

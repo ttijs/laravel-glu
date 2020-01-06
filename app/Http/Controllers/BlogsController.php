@@ -72,4 +72,35 @@ class BlogsController extends Controller
 
         return view('blog.show', ['blog' => $blog]);
     }
+
+    public function edit(Blog $blog)
+    {
+        return view('blog.edit', ['blog' => $blog]);
+    }
+
+    public function update(Blog $blog)
+    {
+        /**
+         * Met request()->validate() kun je validatie toepassen op velden die in
+         * het formulier gedefinieerd staan.
+         *
+         * Title: Is een verplicht veld, moet minimaal 5 karakters bevatten en maximaal 200 karakters lang
+         * Content: Is een verplicht veld, moet minimaal 5 karakters bevatten en maximaal 1000 karakters lang
+         * Author: Is een verplicht veld, moet minimaal 2 karakters bevatten en maximaal 150 karakters lang
+         */
+        $data = request()->validate([
+            'title' => 'required|min:5|max:200',
+            'content' => 'required|min:5|max:1000',
+            'author' => 'required|min:2|max:150',
+        ]);
+
+        /**
+         * Het verschil ten opzichte van store() is dat we een bestaande blog willen updaten
+         * en geen nieuwe blog aan willen maken.
+         */
+        $blog->update($data);
+
+        // Na het opslaan wordt de gebruiker weer terug gestuurd naar de url /blog
+        return redirect('/blog');
+    }
 }
