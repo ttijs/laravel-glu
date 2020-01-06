@@ -12,9 +12,19 @@ class ContactController extends Controller
         return view('contact.index');
     }
 
+    /**
+     * Met store() schrijven we gegevens weg naar de database.
+     */
     public function store()
     {
-        // Voor meer informatie zie: https://laravel.com/docs/5.7/validation
+        /**
+         * Met request()->validate() kun je validatie toepassen op velden die in
+         * het formulier gedefinieerd staan.
+         *
+         * email: Is een verplicht veld, moet minimaal 3 karakters bevatten en maximaal 150 karakters lang
+         *      en moet een valide email adres bevatten
+         * Content: Is een verplicht veld, moet minimaal 5 karakters bevatten en maximaal 500 karakters lang
+         */
         request()->validate([
             'email' => 'required|min:3|max:150|email',
             'content' => 'required|min:5|max:500',

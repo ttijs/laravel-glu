@@ -14,6 +14,10 @@ class PortfolioItemsController extends Controller
         return view('my_work.index', ['items' => $items]);
     }
 
+    /**
+     * $slug is een woord dat opgezocht wordt in de tabel portfolio_items.
+     * Onder water wordt de volgende query uitgevoerd: select * from portfolio_items where slug = $slug
+     */
     public function show($slug)
     {
         $item = PortfolioItem::where('slug', $slug)->get();
