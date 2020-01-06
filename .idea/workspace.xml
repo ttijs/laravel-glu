@@ -4,14 +4,6 @@
     <list default="true" id="707391b5-648f-4998-baef-930c1ce02723" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PortfolioItemsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PortfolioItemsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/blog/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/my_work.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my_work/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/portfolio-item.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my_work/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +166,8 @@
       <workItem from="1577966430172" duration="18790000" />
       <workItem from="1578037864224" duration="6100000" />
       <workItem from="1578165773729" duration="1178000" />
-      <workItem from="1578210694280" duration="6426000" />
+      <workItem from="1578210694280" duration="6506000" />
+      <workItem from="1578338723898" duration="338000" />
     </task>
     <servers />
   </component>

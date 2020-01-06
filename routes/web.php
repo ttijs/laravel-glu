@@ -31,4 +31,4 @@ Route::get('/blog/create', 'BlogsController@create');
 // Dit is een post en onderstaand is nodig om de velden van het formulier op te vangen
 Route::post('/blog', 'BlogsController@store');
 
-Route::get('/blog/{blogId}', 'BlogsController@show');
+Route::get('/blog/{blog}', 'BlogsController@show');

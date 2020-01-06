@@ -32,9 +32,27 @@ class BlogsController extends Controller
         return redirect('/blog');
     }
 
-    public function show($blogId)
+    /**
+     * Omdat het een veel voorkomende taak is om 1 item op te halen
+     * van de database, kun je in de show() een argument opgeven dat meteen
+     * de $blog variabele vult met het Blog object.
+     *
+     * Op deze manier hoef je niet steeds find() of findOrFail() aan te roepen!
+     */
+    public function show(Blog $blog)
     {
-        $blog = Blog::find($blogId);
+        /**
+         * find(): Als de model een niet bestaande blogId op probeert te halen
+         * dan krijg je een lelijke error pagina van Laravel. Dit willen we niet
+         * omdat het rauwe code van de template getoond wordt.
+         */
+//        $blog = Blog::find($blogId);
+
+        /**
+         * findOrFail(): Als de model een niet bestaande blogId op probeert te halen
+         * dan wordt er een nette 404 | error pagina getoond
+         */
+//        $blog = Blog::findOrFail($blogId);
 
         return view('blog.show', ['blog' => $blog]);
     }
