@@ -9,7 +9,7 @@ class BlogsController extends Controller
 {
     public function index(Request $request)
     {
-        $blogs = Blog::where('active', $request->query('active') ?? 1)->get();
+        $blogs = Blog::where('active', $request->query('active', 1))->get();
 
         return view('blog.index', ['blogs' => $blogs]);
     }
