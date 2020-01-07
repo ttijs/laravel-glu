@@ -16,7 +16,9 @@ class BlogsController extends Controller
 
     public function create()
     {
-        return view('blog.create');
+        $blog = new Blog();
+
+        return view('blog.create', compact('blog'));
     }
 
     /**
@@ -24,21 +26,7 @@ class BlogsController extends Controller
      */
     public function store()
     {
-        /**
-         * Met request()->validate() kun je validatie toepassen op velden die in
-         * het formulier gedefinieerd staan.
-         *
-         * Title: Is een verplicht veld, moet minimaal 5 karakters bevatten en maximaal 200 karakters lang
-         * Content: Is een verplicht veld, moet minimaal 5 karakters bevatten en maximaal 1000 karakters lang
-         * Author: Is een verplicht veld, moet minimaal 2 karakters bevatten en maximaal 150 karakters lang
-         */
-        $data = request()->validate([
-            'title' => 'required|min:5|max:200',
-            'content' => 'required|min:5|max:1000',
-            'author' => 'required|min:2|max:150',
-        ]);
-
-        Blog::create($data);
+        Blog::create($this->getValidateData());
 
         // Na het opslaan wordt de gebruiker weer terug gestuurd naar de url /blog
         return redirect('/blog');
@@ -81,6 +69,18 @@ class BlogsController extends Controller
     public function update(Blog $blog)
     {
         /**
+         * Het verschil ten opzichte van store() is dat we een bestaande blog willen updaten
+         * en geen nieuwe blog aan willen maken.
+         */
+        $blog->update($this->getValidateData());
+
+        // Na het opslaan wordt de gebruiker weer terug gestuurd naar de url /blog
+        return redirect('/blog');
+    }
+
+    protected function getValidateData()
+    {
+        /**
          * Met request()->validate() kun je validatie toepassen op velden die in
          * het formulier gedefinieerd staan.
          *
@@ -94,13 +94,6 @@ class BlogsController extends Controller
             'author' => 'required|min:2|max:150',
         ]);
 
-        /**
-         * Het verschil ten opzichte van store() is dat we een bestaande blog willen updaten
-         * en geen nieuwe blog aan willen maken.
-         */
-        $blog->update($data);
-
-        // Na het opslaan wordt de gebruiker weer terug gestuurd naar de url /blog
-        return redirect('/blog');
+        return $data;
     }
 }
