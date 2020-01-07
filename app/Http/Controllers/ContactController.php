@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -37,6 +39,8 @@ class ContactController extends Controller
 
         // Nu slaan we de geprepareerde data op in de contacts tabel
         $contactModel->save();
+
+        Mail::to(request('email'))->send(new ContactMail());
 
         // De pagina terug laten redirecten
         return redirect()->back();

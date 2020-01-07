@@ -24,6 +24,11 @@ Route::get('/contact', 'ContactController@index');
 // Dit is een post en onderstaand is nodig om de velden van het formulier op te vangen
 Route::post('/contact', 'ContactController@store');
 
+//Route::get('/contact-email', function(){
+//    \Illuminate\Support\Facades\Mail::to('james.bond@double07.com')->send(new \App\Mail\ContactMail());
+//    return new \App\Mail\ContactMail();
+//});
+
 Route::get('/blog', 'BlogsController@index');
 
 Route::get('/blog/create', 'BlogsController@create');
