@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class BlogsController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $blogs = Blog::all();
+        $blogs = Blog::where('active', $request->query('active') ?? 1)->get();
 
         return view('blog.index', ['blogs' => $blogs]);
     }
@@ -68,6 +68,9 @@ class BlogsController extends Controller
 
     public function update(Blog $blog)
     {
+//        $data = $this->getValidateData();
+//        dd($data);
+
         /**
          * Het verschil ten opzichte van store() is dat we een bestaande blog willen updaten
          * en geen nieuwe blog aan willen maken.
@@ -92,7 +95,14 @@ class BlogsController extends Controller
             'title' => 'required|min:5|max:200',
             'content' => 'required|min:5|max:1000',
             'author' => 'required|min:2|max:150',
+            'active' => '',
         ]);
+
+        if (isset($data['active']) && $data['active'] == 'on') {
+            $data['active'] = 1;
+        } else {
+            $data['active'] = 0;
+        }
 
         return $data;
     }

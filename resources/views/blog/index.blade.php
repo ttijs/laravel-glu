@@ -5,9 +5,19 @@
 @endsection
 
 @section('content')
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/blog?active=1">Actief</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/blog?active=0">Inactief</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/blog/create">Nieuw</a>
+        </li>
+    </ul>
+    <hr>
     <h1>Blog</h1>
-
-    <a href="/blog/create" class="btn btn-primary">Nieuw</a>
     <hr>
     <table class="table table-striped table-hover">
         <tr>
