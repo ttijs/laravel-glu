@@ -64,7 +64,7 @@ Stap 5:
 
 Test of je in de browser 'Hoi allemaal' ziet door naar de url `mijnproject.nl/blogs` te gaan
 
-Als je bovenstaande stappen hebt uitgevoerd, dan heb je een Blogs pagina gemaakt. De pagina moet nog uitgebreid worden, maar je hebt alle Laravel componenten gebruikt om een webpagina in Laravel werkend te krijgen. Misschien heb je gemerkt dat je MVC gebruikt hebt en heb je de kracht van Artisan beleefd.
+Als je bovenstaande stappen hebt uitgevoerd, dan heb je een Blogs pagina gemaakt. De pagina moet nog uitgebreid worden, maar je hebt Laravel componenten gebruikt om een webpagina in Laravel werkend te krijgen. Misschien heb je gemerkt dat je MVC gebruikt hebt en heb je de kracht van Artisan beleefd.
 
 ## Een blog tabel aanmaken en een blog toevoegen
 
