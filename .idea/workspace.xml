@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="707391b5-648f-4998-baef-930c1ce02723" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,10 +188,14 @@
       <screen x="0" y="23" width="2560" height="1337" />
     </state>
     <state x="936" y="525" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1578165776582" />
-    <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup" timestamp="1578403432964">
-      <screen x="0" y="23" width="2560" height="1337" />
+    <state x="308" y="192" width="824" height="538" key="find.popup" timestamp="1578477393010">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1578002017940" />
+    <state x="308" y="192" width="824" height="538" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1578477393009" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1578477280123">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1578477280123" />
     <state x="684" y="313" width="1192" height="1031" key="search.everywhere.popup/0.23.2560.1337@0.23.2560.1337" timestamp="1578403432964" />
   </component>
 </project>

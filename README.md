@@ -1,5 +1,181 @@
 # Laraval Workshop 2020
 
+# Programma
+
+    - Wat is Laravel
+    - Waarom Laravel
+    - Wat kan ik ermee
+    - Wat voor kansen geeft het me
+    - Achtergrondinformatie MVC
+    - Model
+    - View
+    - Controller
+    - De kracht van Artisan
+    - Wat is een Migration?
+    - Hoe maak ik een Migration met Artisan?
+    - Wat is een Seeder?
+    - Hoe maak ik een Seeder met Artisan?
+    - Wat zijn Routes?
+    - Controllers aanroepen vanuit Routes
+
+## Samen maken we een nieuw Blog project
+
+### Doelstelling van dit project: 
+
+Snappen hoe je met Laravel een werkende pagina kunt maken door gebruik te maken van Artisan en MVC.
+
+## Een benaderbare blogs pagina maken
+
+De site noem ik voor nu mijnproject.nl en moet benaderbaar zijn via de browser. Op mijnproject.nl moet de blogs pagina benaderbaar zijn als ik naar mijnproject.nl/blogs ga.
+
+Stap 1: Maak een BlogController aan: 
+```
+php artisan make:controller BlogController
+```
+
+Stap 2: 
+
+Maak een route aan in /routes/web.php: 
+
+```php
+Route::get('/blogs', 'BlogController@index');
+```
+Hierboven staat eigenlijk: Als ik naar de browser ga en typ de URL `mijnproject.nl/blogs`, dan roep de functie index() in `/app/Https/Controllers/BlogController` aan.
+
+Stap 3: 
+
+Open het bestand `/app/Http/Controllers/BlogController.php`
+
+Voeg in deze controller de functie index() toe: 
+
+```php
+    public function index() { 
+        return view('blogs.index'); 
+    }
+```
+
+De functie index() geeft aan de browser een view terug. Deze view moet nog gemaakt worden.
+
+Stap 4: 
+
+Maak een view aan: `/resources/views/blog/index.blade.php` en voeg wat tekst toe, bijvoorbeeld 'Hoi allemaal'.
+
+Stap 5: Test of je in de browser 'Hoi allemaal' ziet door naar de url `mijnproject.nl/blogs` te gaan
+
+Als je bovenstaande stappen hebt uitgevoerd, dan heb je een Blogs pagina gemaakt. De pagina moet nog uitgebreid worden, maar je hebt alle Laravel componenten gebruikt om een webpagina in Laravel werkend te krijgen. Misschien heb je gemerkt dat je MVC gebruikt hebt en heb je de kracht van Artisan beleefd.
+
+## Een blog tabel aanmaken en een blog toevoegen
+
+Stap 1: 
+Maak een Model aan met een migration: 
+```
+php artisan make:model Blog -m
+```
+
+Er wordt in `/app/` een Blog.php aangemaakt en in `/database/migrations/` een migratie bestand gemaakt zoals `2020_01_07_074346_create_blogs_table.php`.
+
+Stap 2: 
+
+Open de migration /database/migrations/2020_01_02_204508_create_blogs_table.php
+
+Voor nu bestaat een blog uit een titel, inhoud en een auteur, dus we passen de migration aan:
+
+```php
+public function up()
+{
+    Schema::create('blogs', function (Blueprint $table) {
+        $table->bigIncrements('id'); // Iedere rij die je toevoegt krijgt automatisch een ophogend getalletje
+        $table->string('titel'); // Dit is een varchar 255, maximaal 255 karakters
+        $table->text('inhoud'); // Dit is een TEXT, kan oneindig veel tekst in
+        $table->string('auteur');
+        $table->timestamps(); // Dit zijn de created_at, updated_at velden, dit zijn DATETIME velden
+    });
+}
+```
+
+Stap 3: 
+
+Draai de migratie: 
+```
+php artisan migrate
+```
+
+Met deze commando start je de migration en de migration voegt de blogs tabel toe met de velden die je omschreven hebt
+
+Stap 4: 
+
+Maak een route aan: 
+
+```php
+Route::get('/blogs/create', 'BlogController@create');
+```
+
+Stap 5: 
+
+Maak de functie 'create()' aan in BlogController: 
+
+```php
+public function create() { 
+    return view('blogs.create'); 
+}
+```
+
+Stap 6: 
+
+Maak een view aan: `/resources/views/blogs/create.blade.php`
+
+Stap 7.a: 
+
+Voeg een form toe aan de create.blade.php
+
+```html
+<form action="/blogs/create" method="post">
+    @csrf
+    <input type="text" name="titel"></input><br>
+    <input type="text" name="inhoud"></input><br>
+    <input type="text" name="auteur"></input><br>
+    <button type="submit">Maak blog aan</button>
+</form>
+```
+
+Stap 7.b: 
+
+Maak een route aan voor het opslaan van de nieuwe blog
+
+```php
+Route::post('/blogs/create', 'BlogController@store');
+```
+
+Stap 7.c: 
+
+Maak de method 'store()' aan in `/app/Https/Controllers/BlogController.php`
+
+```php
+Public function store() {
+	$titel = request('titel');
+	$inhoud = request('inhoud');
+	$auteur = request('auteur');
+
+	// nieuwe blog toevoegen aan de database
+	$blog = new \App\Blog();
+	$blog->titel = $titel;
+	$blog->inhoud = $inhoud;
+	$blog->auteur = $auteur;
+
+	// Hier slaan we het in de blogs tabel op:
+	$blog->save();
+
+	// Stuur de browser door naar /blogs
+	return redirect('/blogs');
+}
+```
+
+Stap 7.d: Test je formulier uit
+
+Stap 7.e: Controleer in PHPMyAdmin of de blog is toegevoegd
+
+Gefeliciteerd! Je hebt een blog aangemaakt via Laravel, je hebt ook de kracht van Artisan ervaren.
+
 ## Wat is Laravel?
 
 Laravel is een framework dat bedoeld is om sneller een applicatie te maken. Een framework bestaat uit stukjes code dat het ontwikkelen sneller en beter moet maken met als doel dat je het wiel niet opnieuw hoeft uit te vinden tijdens het ontwikkelen.
@@ -68,7 +244,7 @@ Er geldt een afspraak binnen Laravel voor het benoemen van je Controllers: dit m
 
 ## De kracht van Artisan
 
-Laravel wordt geleverd met Artisan. Artisan is een programma die je vanuit een opdrachtvenster met PHP kunt aanroepen. De opdrachtvenster, ook wel terminal of Command Line Interface (CLI) genoemd, kun je commando’s in typen om bijvoorbeeld een programma op te starten. Artisan is een PHP programma die volledig aan sluit op Laravel en neemt het werk weg waarmee je normaal gesproken meer tijd kwijt bent om bepaalde PHP bestanden volledig uit schrijven. 
+Laravel wordt geleverd met Artisan. Artisan is een programma die je vanuit een opdrachtvenster met PHP kunt aanroepen. De opdrachtvenster, ook wel terminal of Command Line Interface (CLI) genoemd, kun je commando's in typen om bijvoorbeeld een programma op te starten. Artisan is een PHP programma die volledig aan sluit op Laravel en neemt het werk weg waarmee je normaal gesproken meer tijd kwijt bent om bepaalde PHP bestanden volledig uit schrijven. 
 
 Bijvoorbeeld: 
 Genereer een Controller met de naam HomeController. In Terminal ga je naar je Laravel project en type de volgende commando in: 
@@ -80,7 +256,7 @@ Als je daarna in de folder /app/Http/Controllers kijkt, dan zie je dat er een Ho
 
 Bovenstaand voorbeeld laat zien dat je geen Controller met de hand hoeft uit te typen, dus het spaart je uiteindelijk tijd uit.
 
-Zo zijn er een hoop Artisan commando’s die je het leven makkelijk maakt. Als je wilt zien welke commando’s Artisan kan uitvoeren, voer dan in de terminal de volgende commando uit: 
+Zo zijn er een hoop Artisan commando's die je het leven makkelijk maakt. Als je wilt zien welke commando's Artisan kan uitvoeren, voer dan in de terminal de volgende commando uit: 
 ```
 php artisan
 ```
@@ -132,7 +308,7 @@ Route::get('/blog', function () {
 });
 ```
 
-In bovenstaand voorbeeld wordt er gekeken naar een GET request en als de URL ‘/blog’ is dan geef de output van de view ‘blog’ terug. De view is te vinden in de folder /resources/views/blog.blade.php
+In bovenstaand voorbeeld wordt er gekeken naar een GET request en als de URL '/blog' is dan geef de output van de view 'blog' terug. De view is te vinden in de folder /resources/views/blog.blade.php
 
 ## Controllers aanroepen in Routes
 Als je MVC wilt toepassen, dan kun je de route instellen om een bestaande Controller aan te roepen.
@@ -184,7 +360,7 @@ In bovenstaand voorbeeld haal ik alle items op om PortfolioItem::all() aan te ro
 Als je 1 item wilt ophalen dan moet je de volgende snippen invoeren:
 
 ```php
-$item = PortfolioItem::where(‘id’, 10)->get();
+$item = PortfolioItem::where('id', 10)->get();
 ```
 
 
