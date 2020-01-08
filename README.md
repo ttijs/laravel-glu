@@ -50,7 +50,7 @@ Voeg in deze controller de functie index() toe:
 
 ```php
     public function index() { 
-        return view('blogs.index'); 
+        return view('blog.index'); 
     }
 ```
 
