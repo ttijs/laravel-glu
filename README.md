@@ -2,10 +2,10 @@
 
 # Programma
 
-    - Wat is Laravel
-    - Waarom Laravel
-    - Wat kan ik ermee
-    - Wat voor kansen geeft het me
+    - Wat is Laravel?
+    - Waarom Laravel?
+    - Wat kan ik ermee?
+    - Wat voor kansen biedt het me?
     - Achtergrondinformatie MVC
     - Model
     - View
@@ -67,6 +67,7 @@ Als je bovenstaande stappen hebt uitgevoerd, dan heb je een Blogs pagina gemaakt
 ## Een blog tabel aanmaken en een blog toevoegen
 
 Stap 1: 
+
 Maak een Model aan met een migration: 
 ```
 php artisan make:model Blog -m
